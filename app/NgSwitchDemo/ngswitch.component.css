@@ -1,0 +1,24 @@
+.text-danger{
+    color: red;
+    background-color: lightcyan;
+}
+
+.text-success {
+    color: white;
+    background-color: green;
+}
+
+.text-warning {
+    background-color: yellow;
+    color: blue;
+}
+
+thead {
+    font-size: 20px;
+    color: blue;
+    background-color: lightsalmon;
+}
+
+h2 {
+    color: blueviolet;
+}

@@ -1,0 +1,9 @@
+<fieldset>
+  <legend>Tourist places (child)</legend>
+  <h1>You have selected {{ city }}</h1>
+  <button (click)="OnBtnClick()">Click here</button> to show all tourist places
+
+  <ul>
+    <li *ngFor="let t of touristPlaces">{{ t }}</li>
+  </ul>
+</fieldset>

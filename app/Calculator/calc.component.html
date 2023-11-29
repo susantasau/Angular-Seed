@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <td><label for="num1">Enter first number:-</label></td>
+    <td><input type="number" id="num1" [(ngModel)]="text1" /></td>
+  </tr>
+  <tr>
+    <td><label for="num2">Enter second number:-</label></td>
+    <td><input type="number" id="num2" [(ngModel)]="text2" /></td>
+  </tr>
+</table>
+<br />
+<br />
+<input type="button" value="Addition" (click)="add()" />
+<input type="button" value="Subtraction" (click)="sub()" />
+<input type="button" value="Multiplcation" (click)="mul()" />
+<input type="button" value="Division" (click)="div()" />
+
+<h1>Result value = {{ addvalue|number:".2" }}</h1>
+
+
+<h1>{{"Susanta"|reversepipe}}</h1>

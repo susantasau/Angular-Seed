@@ -1,0 +1,32 @@
+<h1>All ordered details</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Order-Id</th>
+      <th>Order-Name</th>
+      <th>City Name</th>
+      <th>Order-Status</th>
+    </tr>
+  </thead>
+
+  <tbody *ngFor="let p of order" [ngSwitch]="p.Status">
+    <tr *ngSwitchCase="'Pending'" >
+        <td>{{p.OrderId}}</td>
+        <td>{{p.OrderName}}</td>
+        <td>{{p.City}}</td>
+        <td class="pending-style">{{p.Status}}</td>
+    </tr>
+    <tr *ngSwitchCase="'Delivered'" >
+        <td>{{p.OrderId}}</td>
+        <td>{{p.OrderName}}</td>
+        <td>{{p.City}}</td>
+        <td class="deliver-style">{{p.Status}}</td>
+    </tr>
+    <tr *ngSwitchCase="'Processing'" >
+        <td>{{p.OrderId}}</td>
+        <td>{{p.OrderName}}</td>
+        <td>{{p.City}}</td>
+        <td class="processed-style">{{p.Status}}</td>
+    </tr>
+  </tbody>
+</table>

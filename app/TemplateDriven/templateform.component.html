@@ -1,0 +1,38 @@
+<form #userForm="ngForm" (ngSubmit)="OnFormSubmit(userForm)">
+    <table>
+        <tr>
+            <td><label>First Name:-</label></td>
+            <td><input type="text" name="fname" ngModel #v1></td>
+        </tr>
+        <tr>
+            <td><label>Last Name:-</label></td>
+            <td><input type="text" name="lname" ngModel #v2></td>
+        </tr>
+        <tr>
+            <td><label>Email:-</label></td>
+            <td><input type="email" name="email" ngModel #v3></td>
+        </tr>
+    </table>
+
+    <button type="submit">Submit</button>
+    <button (click)="OnReset(userForm)">Reset</button>
+</form>
+
+<pre>{{userForm.value|json}}</pre>
+
+<br>
+<hr>
+<h2>Summary</h2>
+<ul>
+    <li>{{userForm.controls['fname'].value}}</li>
+    <li>{{userForm.controls['lname'].value}}</li>
+    <li>{{userForm.controls['email'].value}}</li>
+</ul>
+
+
+<h2>Template variable</h2>
+<ul>
+    <li>{{v1.value}}</li>
+    <li>{{v2.value}}</li>
+    <li>{{v3.value}}</li>
+</ul>

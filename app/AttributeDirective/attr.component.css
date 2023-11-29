@@ -1,0 +1,12 @@
+.mystyle1 {
+    width: 400px;
+    height: 200px;
+    font-size: 30px;
+    font-family: fantasy;
+    
+}
+
+.mystyle2 {
+    background: linear-gradient(orange,white,green);
+    color: blue;
+}

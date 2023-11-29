@@ -1,0 +1,20 @@
+<fieldset>
+    <legend><h1>All fruits name are:- </h1></legend>
+<ol>
+    <li *ngFor="let f of fruits">{{f}}</li>
+</ol>
+</fieldset>
+<table cellspacing="3" cellpadding="10">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    <tr *ngFor="let p of products">
+        <td>{{p.pId}}</td>
+        <td>{{p.pName}}</td>
+        <td>{{p.pPrice}}</td>
+    </tr>
+</table>
+
+<h1 *ngIf="status">Susanta you are right</h1>

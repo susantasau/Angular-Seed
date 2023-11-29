@@ -1,0 +1,14 @@
+<input type="button" (click)="method1()" value="say hello">
+<br>
+<h1 style="color: brown; background-color: aqua;">{{output}}</h1>
+
+<select [(ngModel)]="cat" (click)="method2()">
+    <option>Toys</option>
+    <option>Electronics</option>
+    <option>Clothes</option>
+</select>
+
+
+<ol>
+    <li *ngFor="let p of prodlist">{{p}}</li>
+</ol>

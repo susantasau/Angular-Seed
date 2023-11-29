@@ -1,0 +1,15 @@
+<p style="color: red; background-color: yellowgreen">
+  This is a paragraph with css style
+</p>
+
+<p [ngStyle]="{ color: clr, 'font-size': fsize + 'px' }">
+  This is a paragraph with ngstyle
+</p>
+
+<div [ngClass]="['mystyle1', 'mystyle2']">Hello using array syntax</div>
+
+<div [ngClass]="'mystyle1 mystyle2'">Hello using string syntax</div>
+
+<div [ngClass]="{ mystyle1: true, mystyle2: true }">
+  Hello using object syntax
+</div>

@@ -1,0 +1,54 @@
+<h1>Date Pipe</h1>
+{{empobj.dt}}<br/>
+{{empobj.dt|date:"dd-MM-yyyy"}}<br/>
+{{empobj.dt|date:"mediumDate"}}<br/>
+{{empobj.dt|date:"shortDate"}}<br/>
+{{empobj.dt|date:"MM-dd-yyyy"}}<br/>
+
+
+<h4>Currency Pipe</h4>
+{{45}}<br/>
+{{45|currency}}<br/>
+{{45|currency:"INR"}}<br/>
+{{45|currency:"EUR"}}<br/>
+{{45|currency:"USD"}}<br/>
+
+
+<h4>Number Pipe</h4>
+{{75}}<br/>
+{{75|number:"2.2-4"}}<br/>
+{{75|number:"3.2-5"}}<br/>
+
+<hr>
+<h4>Upper Case</h4>
+<p>{{"seed"|uppercase}}</p>
+<h4>Lower case</h4>
+<p>{{"SEED"|lowercase}}</p>
+<h4>Title Case</h4>
+<p>{{"seed"|titlecase}}</p>
+
+<hr>
+<h2>Object without json pipe</h2>
+<h3>{{empobj}}</h3>
+<h2>Json Pipe</h2>
+<pre>{{empobj|json}}</pre>
+<hr>
+<h2>Percentage</h2>
+<h4>{{0.345365|percent:"3.2-2"}}</h4>
+<h4>{{0.345|percent}}</h4>
+
+<hr>
+<h2>Custom pipe</h2>
+<h3>
+    <pre>
+        Employee Id: {{empobj.empId}}
+        Name: {{empobj.firstName}}&nbsp;{{empobj.lastName}}
+        Salary: {{empobj.salary}}
+        DOB: {{empobj.dt|date:"dd-MM-yyyy"}}
+        Country:{{empobj.country}}({{empobj.country|countrycode|uppercase}})
+    </pre>
+</h3>
+
+<hr>
+<h3>Full details</h3>
+<pre>{{empobj|json}}</pre>

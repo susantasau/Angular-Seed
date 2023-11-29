@@ -1,0 +1,42 @@
+<div id="divTable">
+  <table cellspacing="10" cellpadding="10">
+    <thead>
+      <tr>
+        <th>Roll No</th>
+        <th>Name</th>
+        <th>Marks</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let s of stud">
+        <td>{{ s.rollNo }}</td>
+        <td>{{ s.name }}</td>
+        <td>{{ s.marks }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div> 
+    <table>
+      <tr>
+        <td><label>Roll No- </label></td>
+        <td><input type="number" min="{{ MinValue }}" [(ngModel)]="roll"/></td>
+      </tr>
+      <tr>
+        <td><label>Name- </label></td>
+        <td><input type="text" [(ngModel)]="name"/></td>
+      </tr>
+      <tr>
+        <td><label>Marks- </label></td>
+        <td><input type="number" [(ngModel)]="mark"/></td>
+      </tr>
+    </table>
+    <br><br>
+    <button (click)="AddData()">Add</button>
+    <button (click)="UpdateData()">Update</button>
+    <button>Delete</button>
+    <button (click)="ShowData()">Show All</button>
+
+</div>

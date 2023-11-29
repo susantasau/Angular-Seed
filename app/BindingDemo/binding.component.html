@@ -1,0 +1,26 @@
+<h1>{{msg}}</h1>
+<br><br><hr>
+<h2>one way source to view using interpolation binding</h2>
+<br>
+<img src="{{imgpath}}" width="{{w}}" height="{{ht}}">
+<br>
+<h2>one way binding s to v using property binding</h2>
+<br>
+<img [src]="imgpath" [width]="w"  [height]="ht">
+
+
+<h2>Input type </h2>
+<input type="text" [(ngModel)]="personName">
+<br>
+<input type="button" value="Click here" (click) = "greet()">
+<h1>{{output}}</h1>
+
+<br><hr>
+Enter some  color:
+<input type="text" [(ngModel)]="clr">
+<br>
+<select [(ngModel)]="clr">
+    <option *ngFor="let c of colors">{{c}}</option>
+</select>
+<br>
+<h1 [ngStyle]="{'color':clr}">Hello Susanta</h1>

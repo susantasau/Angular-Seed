@@ -1,0 +1,26 @@
+<h2>--------------<u>Switch</u>&nbsp;<u>Case</u>&nbsp;<u>output</u>--------------</h2>
+<table border="2" cellpadding="10">
+    <thead>
+        <th>Person Name</th>
+        <th>Person Age</th>
+        <th>Person Country</th>
+    </thead>
+
+    <tbody *ngFor="let person of people" [ngSwitch]="person.Country">
+        <tr *ngSwitchCase="'India'" class="text-success">
+            <td>{{person.Name}}</td>
+            <td>{{person.Age}}</td>
+            <td>{{person.Country}}</td>
+        </tr>
+        <tr *ngSwitchCase="'UK'" class="text-danger">
+            <td>{{person.Name}}</td>
+            <td>{{person.Age}}</td>
+            <td>{{person.Country}}</td>
+        </tr>
+        <tr *ngSwitchDefault class="text-warning">
+            <td>{{person.Name}}</td>
+            <td>{{person.Age}}</td>
+            <td>{{person.Country}}</td>
+        </tr>
+    </tbody>
+</table>

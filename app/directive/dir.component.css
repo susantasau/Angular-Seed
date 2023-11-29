@@ -1,0 +1,15 @@
+table{
+    border: solid 1px red;
+    margin-left: 35%;
+    
+}
+td{
+    border: solid red 1px;
+}
+th{
+    border: solid green 2px;
+}
+
+fieldset{
+    width: 25%;
+}

@@ -1,0 +1,23 @@
+td{
+    text-align: center;
+    border: 1px solid green;
+    background-color: lightblue;
+    font-size: 15px;
+}
+
+th{
+    text-align: center;
+    border: 1px solid green;
+    background-color: yellowgreen;
+    font-size: 20px;
+}
+
+.death {
+    color: white;
+    background-color: red;
+}
+
+.cure {
+    background-color: green;
+    color: white;
+}

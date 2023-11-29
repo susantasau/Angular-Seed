@@ -1,0 +1,15 @@
+<fieldset>
+  <legend>Output Decorator</legend>
+  <div>
+    <img src="{{ imagepath }}" alt="No image" />
+
+    <h2>{{ title }}</h2>
+    <h4>{{ word }}</h4>
+
+    <ol>
+      <li *ngFor="let l of lst">{{ l }}</li>
+    </ol>
+  </div>
+
+  <dict-child (eventObj)="OnwordChange($event)"></dict-child>
+</fieldset>

@@ -1,0 +1,24 @@
+<table cellpadding="10" border="2">
+    <thead>
+        <tr>
+            <th>City Name</th>
+            <th>Place</th>
+            <th>Positive case</th>
+            <th>Cured Patient</th>
+            <th>Death Cases</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let case of covid">
+            <td>{{case.city}}</td>
+            <td>{{case.place}}</td>
+            <td>{{case.positiveCases}}</td>
+            <td class="cure">{{case.curedPatient}}</td>
+            <td class="death">{{case.deathCases}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+<br>
+<h1>{{s}}</h1>

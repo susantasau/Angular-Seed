@@ -1,0 +1,17 @@
+<img [src]='photo' [width]='w1' [height]='h1'>
+<br><hr>
+<select [(ngModel)]="set">
+    <option *ngFor="let i of images">{{i}}</option>
+</select>
+&nbsp;
+&nbsp;
+&nbsp;
+<button (click)="change()">Change Image</button>
+<br>
+<div  style="width: 500px; height: 400px; float:left; margin: 10px;">
+    <img src="{{setImage}}" alt="No Image"  style="width: 500px; height: 400px;">
+</div>
+
+<div  style="width: 500px; height: 400px; float:left; margin: 10px;">
+    <img [src]="setImage" alt="No Image"  style="width: 500px; height: 400px;">
+</div>

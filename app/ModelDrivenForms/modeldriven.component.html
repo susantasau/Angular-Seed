@@ -1,0 +1,22 @@
+<form [formGroup]="userForm" (ngSubmit)="OnFormSubmit()">
+    <label>Person name-</label>
+    <input type="text" formControlName="fname">
+    <span *ngIf="fname.invalid" [ngClass]="'errorlabel'">Person name is required</span>
+<br>
+    <label>Age- </label>
+    <input type="number" formControlName="age">
+    <span *ngIf="age?.errors?.required" [ngClass]="'errorlabel'">Age is required</span>
+    <span *ngIf="age?.errors?.min" [ngClass]="'errorlabel'">Age canot be less than 18</span>
+    <span *ngIf="age?.errors?.max" [ngClass]="'errorlabel'">Age cannot be exceed more than 100</span>
+<br>
+
+<label>City</label>
+<input type="text" formControlName="city">
+<span *ngIf="city.invalid" [ngClass]="'errorlabel'">City is required</span>
+<br>
+<button type="submit">Submit</button>
+</form>
+
+<br>
+<br>
+<pre>{{userForm.value|json}}</pre>

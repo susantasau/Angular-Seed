@@ -1,0 +1,85 @@
+<h1 style="color: green">{{ success }}</h1>
+
+<div style="width: 30%; margin-left: 10%; float: left;">
+  <form #myForm="ngForm" (ngSubmit)="OnBtnSubmit(myForm)">
+    <table>
+      <tr>
+        <td><label>First Name:-</label></td>
+        <td><input type="text" name="fname" ngModel /></td>
+      </tr>
+      <tr>
+        <td><label>Middle Name:-</label></td>
+        <td><input type="text" name="mname" [(ngModel)]="mname" /></td>
+      </tr>
+      <tr>
+        <td><label>Last Name:-</label></td>
+        <td><input type="text" name="lname" ngModel /></td>
+      </tr>
+      <tr>
+        <td><label>Gender:-</label></td>
+        <td>
+          <input id="m" type="radio" name="gen" value="Male" ngModel /><label for="m">Male</label>
+          <input id="f" type="radio" name="gen" ngModel value="Female" /><label for="f">Female</label>
+        </td>
+      </tr>
+      <tr>
+        <td><label>Date of Birth:-</label></td>
+        <td><input type="date" name="dob" ngModel /></td>
+      </tr>
+      <tr>
+        <td><label>City:-</label></td>
+        <td>
+          <select name="cityname" ngModel>
+            <option>Kolkata</option>
+            <option>Delhi</option>
+            <option>Mumbai</option>
+            <option>Pune</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label>Contact no:-</label></td>
+        <td><input type="tel" name="mob" ngModel /></td>
+      </tr>
+      <tr>
+        <td><label>Address:-</label></td>
+        <td><textarea name="add" ngModel cols="30" rows="10"></textarea></td>
+      </tr>
+      <br />
+      <tr>
+        <td><button type="submit">Submit</button></td>
+        <td><button>Reset</button></td>
+      </tr>
+    </table>
+  </form>
+</div>
+<div style="width: 30%; margin-left: 10%; float: left;" [ngStyle]="{'visibility':vis}">
+    <!-- <pre>{{myForm.value|json}}</pre> -->
+
+    <table cellpadding="10">
+        <tr>
+            <th class="th1">Name</th>
+            <td class="th1">{{name}}</td>
+        </tr>
+        <tr>
+            <th class="th1">Gender</th>
+            <td class="th1">{{myForm.controls['gen'].value}}</td>
+        </tr>
+        <tr>
+            <th class="th1">Date of Birth</th>
+            <td class="th1">{{myForm.controls['dob'].value|date:"dd-MM-yyyy"}}</td>
+        </tr>
+        <tr>
+            <th class="th1">City</th>
+            <td class="th1">{{myForm.controls['cityname'].value}}</td>
+        </tr>
+        <tr>
+            <th class="th1">Phone no</th>
+            <td class="th1">{{myForm.controls['mob'].value}}</td>
+        </tr>
+        <tr>
+            <th class="th1">Address</th>
+            <td class="th1">{{myForm.controls['add'].value}}</td>
+        </tr>
+    </table>
+</div>
